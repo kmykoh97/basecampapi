@@ -10,15 +10,14 @@ load_dotenv() # to read .env
 with open("credentials.json", "r") as jsonfile:
   data = json.load(jsonfile)
 
-# date_of_report = input("Select YYYY-MM (e.g. 2022-01) to generate report: ")
-date_of_report = "2023-01"
+date_of_report = input("Select YYYY-MM (e.g. 2022-01) to generate report: ")
 
 credentials = {
   "account_id": data["account_id"],
- 	"client_id": data["client_id"],
+  "client_id": data["client_id"],
   "client_secret": data["client_secret"],
- 	"redirect_uri": data["redirect_uri"],
- 	"refresh_token": data["refresh_token"]
+  "redirect_uri": data["redirect_uri"],
+  "refresh_token": data["refresh_token"]
 }
 
 bc = Basecamp(credentials=credentials)
